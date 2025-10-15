@@ -1,4 +1,34 @@
 # update_rates_simple.py
+# ----------------------
+# This script fetches latest currency exchange rates relative to USD
+# from HexaRate API and updates a local file 'rates.txt'.
+# 
+# API Request Example:
+# curl --request GET \
+#   --url 'https://hexarate.paikama.co/api/rates/latest/USD?target=GBP'
+#
+# Example API Response:
+# {
+#   "status_code": 200,
+#   "data": {
+#     "base": "USD",
+#     "target": "GBP",
+#     "mid": 0.780945,
+#     "unit": 1,
+#     "timestamp": "2025-10-153T05:16:50.272Z"
+#   }
+# }
+#
+# Explanation of fields:
+# - base: the base currency for conversion (USD)
+# - target: the target currency (e.g., GBP)
+# - mid: the mid-market exchange rate
+# - unit: number of units (usually 1)
+# - timestamp: UTC time when the rate was last updated
+#
+# The script converts the UTC timestamp to Berlin time (CEST, UTC+2)
+# and prints both rates and timestamps for the selected currencies.
+
 import requests
 from datetime import datetime, timedelta
 
