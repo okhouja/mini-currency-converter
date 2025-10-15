@@ -1,38 +1,70 @@
 # 💱 Mini Currency Converter
 
-A beginner-friendly **Python mini project** that converts one currency to another using exchange rates stored in a local text file (`rates.txt`).
+### A beginner-friendly **Python mini project** created for the [Redi School Python Foundation Course - Hamburg](https://www.redi-school.org/data-analytics/hamburg/dcp/python-foundation) :  
+- It converts amounts between currencies using a local file (`rates.txt`)  
+- and includes an optional advanced feature to update exchange rates from the internet.
+
+---
+
+## 🏗 Project Structure
+
+- `converter.py` → Main program (reads `rates.txt` and converts currencies).  
+- `rates.txt` → Text file containing exchange rates.  
+- `update_rates.py` → Optional advanced script to fetch latest rates from HexaRate API.  
+- `update_rates_simple.py` → Beginner-friendly script for quick demonstration (updates rates and shows them in terminal).
 
 ---
 
 ## 🧾 Features
+
 - Reads currency exchange rates from a text file  
 - Simple user input via terminal  
 - Converts any currency to another using USD as a base  
 - Beginner-friendly: uses only loops, dictionaries, and basic math  
+- Optional: updates rates from the internet using HexaRate API  
 
 ---
 
 ## ⚙️ How It Works
-1. The program reads each line from `rates.txt`
-2. It stores the data in a dictionary like:  
-   `{ "USD": 1.0, "EUR": 0.92, "GBP": 0.79, ... }`
+
+1. `converter.py` reads the exchange rates from `rates.txt`.  
+2. User chooses **source** and **target** currencies, then enters the amount.  
+3. The program calculates and prints the converted value.  
+4. Optional: run `update_rates.py` or `update_rates_simple.py` to refresh the rates before conversion.  
+5. `update_rates_simple.py` is beginner-friendly:  
+   - Updates the same currencies  
+   - Prints new rates directly to the terminal  
+   - Avoids complex error handling for simplicity
+
+---
+
+## 📝 Conversion Logic
+
+1. The program reads each line from `rates.txt`  
+2. Stores the data in a dictionary like:  
+   ```python
+   { "USD": 1.0, "EUR": 0.92, "GBP": 0.79, ... }
 3. The user chooses:
    - Source currency (e.g. `USD`)
    - Target currency (e.g. `EUR`)
    - Amount to convert
-4. The amount is first converted to USD, then to the target currency.
+4. Conversion formula:
 
+    ```python
+    amount_in_usd = amount / rates[from_currency]
+    converted = amount_in_usd * rates[to_currency]
+    ```
 ---
 
 ## 🧩 Example
 **rates.txt**
-
-**rates.txt**
-USD 1.0
-EUR 0.92
-GBP 0.79
-JPY 151.35
-TRY 34.25
+```
+USD 1.00
+EUR 0.86
+GBP 0.75
+JPY 151.68
+TRY 41.84
+```
 
 
 **Run the program**
