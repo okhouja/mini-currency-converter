@@ -10,7 +10,7 @@
 
 - `converter.py` → Main program (reads `rates.txt` and converts currencies).  
 - `rates.txt` → Text file containing exchange rates.  
-- `update_rates.py` → Optional advanced script to fetch latest rates from HexaRate API.  
+- `update_rates.py` → Optional advanced script to fetch latest rates from [HexaRate API](https://hexarate.paikama.co/).  
 - `update_rates_simple.py` → Beginner-friendly script for quick demonstration (updates rates and shows them in terminal).
 
 ---
