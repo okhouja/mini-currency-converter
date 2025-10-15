@@ -64,7 +64,7 @@
 $ python update_rates.py
 ✅ Rates updated successfully in rates.txt
 ```
-***update_rates_simple.py** is a beginner-friendly version that:
+**update_rates_simple.py** is a beginner-friendly version that:
 
 * Updates the same currencies.
 
