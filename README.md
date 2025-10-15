@@ -73,6 +73,26 @@ $ python update_rates.py
 * Avoids complex error handling for students.
 
 ---
+## 🌍 Currency Reference List (Important Currencies)
+
+You can choose additional currencies from this list to add to `currencies` in `update_rates_simple.py` or `update_rates.py`:
+
+| Code | Currency Name          |
+|------|----------------------|
+| USD  | United States Dollar  |
+| EUR  | Euro                  |
+| GBP  | British Pound         |
+| JPY  | Japanese Yen          |
+| TRY  | Turkish Lira          |
+| AUD  | Australian Dollar     |
+| CAD  | Canadian Dollar       |
+| CHF  | Swiss Franc           |
+| CNY  | Chinese Yuan          |
+| EGP  | Egyptian Pound        |
+
+For the full list of active currencies: [ISO 4217 Active Codes](https://en.wikipedia.org/wiki/ISO_4217#Active_codes_(list_one))
+
+---
 
 ## 🧩 Example
 **rates.txt**
