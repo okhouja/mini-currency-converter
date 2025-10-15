@@ -46,10 +46,10 @@ Available currencies:
 - TRY
 
 Convert from (e.g. USD): EUR
-Convert to (e.g. GBP): JPY
+Convert to (e.g. GBP): GBP
 Amount: 10
 
-10.00 EUR = 1641.77 JPY
+10.00 EUR = 8.71 GPB
 ```
 
 ## 🧠 What I Learned
@@ -58,6 +58,7 @@ Amount: 10
 - Using `for` loops and dictionaries  
 - Handling user input and output  
 - Simple currency conversion logic  
+- Optional: Fetching data from an online API
 
 ---
 
@@ -65,6 +66,7 @@ Amount: 10
 
 - Python 3 installed  
 - `rates.txt` in the same folder as `converter.py`
+- Optional: `requests` library for online updates (`pip install requests`) 
 
 ---
 
