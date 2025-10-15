@@ -28,6 +28,7 @@ for cur in currencies:
         response.raise_for_status()  # Raise error if HTTP request fails
 
         data = response.json()  # Convert JSON response to Python dict
+        timestamp = data['data']['timestamp'] # Extract the timestamp of the rate
 
         if data.get('status_code') == 200 and 'data' in data:
             rates[cur] = data['data']['mid']  # Extract the mid-market rate
@@ -45,4 +46,4 @@ with open("rates.txt", "w") as file:
 print("✅ Rates updated successfully in rates.txt")
 print("Current rates:")
 for cur, value in rates.items():
-    print(f"{cur}: {value:.2f}")
+    print(f"{cur}: {value:.2f} (updated: {timestamp})")

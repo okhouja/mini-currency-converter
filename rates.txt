@@ -1,5 +1,5 @@
-USD 1.00
-EUR 0.86
-GBP 0.75
-JPY 151.68
-TRY 41.84
+USD 1.00 (updated in Berlin Time: Base currency) 
+EUR 0.86 (updated in Berlin Time: 2025-10-15 02:00:50) 
+GBP 0.75 (updated in Berlin Time: 2025-10-15 02:00:50) 
+JPY 151.68 (updated in Berlin Time: 2025-10-15 02:03:52) 
+TRY 41.84 (updated in Berlin Time: 2025-10-15 02:02:51) 
