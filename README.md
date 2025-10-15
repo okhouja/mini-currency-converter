@@ -54,6 +54,12 @@
     amount_in_usd = amount / rates[from_currency]
     converted = amount_in_usd * rates[to_currency]
     ```
+## 💡 Why convert through USD?
+All exchange rates in rates.txt are stored relative to the US Dollar (USD).
+So when converting between two non-USD currencies (e.g., JPY → EUR),
+the amount is first converted to USD and then from USD to the target currency —
+this keeps the math simple and consistent for all conversions.
+
 ---
 ## 🌐 Optional: Update Rates from the Internet
 

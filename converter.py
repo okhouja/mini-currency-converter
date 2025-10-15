@@ -30,7 +30,12 @@ amount = float(input("Amount: "))     # Convert input string to float
 
 # -----------------------------
 # Step 4: Convert the amount
-# Conversion logic: first convert to USD, then to target currency
+# Conversion logic explanation:
+# All rates in rates.txt are stored relative to USD (1 USD = X currency)
+# Therefore, when converting from one non-USD currency to another (e.g., JPY -> EUR),
+# we first convert the amount to USD, then from USD to the target currency.
+# This makes the calculation simple and consistent for all currencies.
+
 amount_in_usd = amount / rates[from_currency]
 converted = amount_in_usd * rates[to_currency]
 
