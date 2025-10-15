@@ -74,7 +74,7 @@ $ python update_rates.py
 ---
 ## 🕒 About the Timestamp (Berlin Time) - in `update_rates_simple.py`
 
-When fetching rates from the HexaRate API, each response includes a UTC timestamp showing when the rate was last updated online.
+When fetching rates from the [HexaRate API](https://hexarate.paikama.co/), each response includes a UTC timestamp showing when the rate was last updated online.
 The script automatically converts this timestamp to Berlin local time (CEST = UTC + 2) for better readability.
 You’ll see each rate printed together with its local update time in the `Terminal` and in `rates.txt` file.
 
