@@ -54,6 +54,9 @@
     amount_in_usd = amount / rates[from_currency]
     converted = amount_in_usd * rates[to_currency]
     ```
+5. Base → USD → target approach keeps calculations simple, especially when adding new currencies.
+
+---
 ## 💡 Why convert through USD?
 All exchange rates in rates.txt are stored relative to the US Dollar (USD).
 So when converting between two non-USD currencies (e.g., JPY → EUR),
@@ -77,7 +80,11 @@ $ python update_rates.py
 * Prints the new rates directly to the terminal for demonstration.
 
 * Avoids complex error handling for students.
+
+* Shows the timestamp of the update in Berlin time (CEST = UTC +2)
+
 ---
+
 ## 🕒 About the Timestamp (Berlin Time) - in `update_rates_simple.py`
 
 When fetching rates from the [HexaRate API](https://hexarate.paikama.co/), each response includes a UTC timestamp showing when the rate was last updated online.
@@ -117,7 +124,7 @@ TRY 41.84
 ```
 
 
-**Run the program**
+**Run the program:**
 ```bash
 $ python converter.py
 Available currencies:
@@ -139,8 +146,9 @@ Amount: 10
 - Reading from text files  
 - Using `for` loops and dictionaries  
 - Handling user input and output  
-- Simple currency conversion logic  
+- Simple currency conversion logic (base → USD → target)
 - Optional: Fetching data from an online API
+- Working with timestamps and time zone conversion
 
 ---
 
@@ -148,8 +156,22 @@ Amount: 10
 
 - Python 3 installed  
 - `rates.txt` in the same folder as `converter.py`
-- Optional: `requests` library for online updates (`pip install requests`) 
+- Optional: `requests` library for online updates: 
 
+    ```bash
+    pip install requests
+    ```
+
+--- 
+## 🚀 Future Ideas / Next Steps
+
+- Add more currencies dynamically using ISO 4217 list
+- Create a JSON-based API to serve rates to web or mobile apps
+- Integrate with a database (e.g., Supabase) for persistent storage
+- Build a web interface using Next.js for real-time conversions
+- Add authentication for users to save favorite currencies
+- Implement automatic periodic updates of exchange rates
+- Add historical rates and simple analytics (charts)
 ---
 
 ## 🧑‍💻 Author
