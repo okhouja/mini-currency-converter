@@ -55,6 +55,24 @@
     converted = amount_in_usd * rates[to_currency]
     ```
 ---
+## 🌐 Optional: Update Rates from the Internet
+
+**update_rates.py** fetches real rates from [HexaRate](https://hexarate.paikama.co/) and updates `rates.txt`.  
+
+**How to use:**
+```bash
+$ python update_rates.py
+✅ Rates updated successfully in rates.txt
+```
+***update_rates_simple.py** is a beginner-friendly version that:
+
+* Updates the same currencies.
+
+* Prints the new rates directly to the terminal for demonstration.
+
+* Avoids complex error handling for students.
+
+---
 
 ## 🧩 Example
 **rates.txt**
