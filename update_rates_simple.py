@@ -33,7 +33,7 @@ import requests
 from datetime import datetime, timedelta
 
 # List of currencies to update (relative to USD)
-currencies = ["USD", "EUR", "GBP", "JPY", "TRY"]
+currencies = ["USD", "EUR", "GBP", "JPY", "TRY", "CAD", "AUD", "CHF", "CNY", "INR"]
 rates = {}
 timestamps = {}
 
